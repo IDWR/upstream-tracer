@@ -1,0 +1,25 @@
+{
+  "name": "EpaTracer",
+  "2D": true,
+  "3D": false,
+  "platform": "HTML",
+  "version": "2.16",
+  "wabVersion": "2.16",
+  "author": "Esri Inc and IDWR",
+  "description": "EpaTracer",
+  "copyright": "Copyright 2020 Idaho Department of Water Resources",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "properties": {
+    "inPanel":true,
+    "hasLocale": true,
+    "hasStyle":true,
+    "hasConfig":true,
+    "hasUIFile":true,
+    "hasSettingPage":true,
+    "hasSettingUIFile":true,
+    "hasSettingLocale":true,
+    "hasSettingStyle":true,
+    "IsController":false,
+    "keepConfigAfterMapSwitched": false
+  }
+}
