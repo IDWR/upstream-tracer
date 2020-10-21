@@ -3,11 +3,11 @@
 Add the `EpaTracer` widget to the web application. Optionally change the title or widget icon.
 ## Search Source Settings
 Specify the layers used to select a starting point for the upstream-trace.   
-![Search Source Settings](images/settings/SearchSourceSettings.png)
+> ![Search Source Settings](images/settings/SearchSourceSettings.png)
 ## Search Settings
 Specify the layer(s) to search for -- each search-layer must have a pop-up configured.  
 Buffer distance (width) and upstream distance are set here.  
-![Search Source Settings](images/settings/SearchSettings.png)
+> ![Search Source Settings](images/settings/SearchSettings.png)
 ## Directions Settings
 This sets the direction of the trace, upstream or downstream.  
 ##### This setting is not currently used in this widget.   
@@ -16,7 +16,7 @@ Use graphics to represent attribute values
 ##### This setting is not currently used in this widget.   
 ## Filter Settings
 Set filters on search-layers. Specify the label.   
-![Filter Settings Info tab](images/settings/FilterSettingsInfo.png)   
+> ![Filter Settings Info tab](images/settings/FilterSettingsInfo.png)   
 
 For example, choose to see only values for the "Source" field that are "GROUNDWATER".   
-![Filter Settings Expressions tab](images/settings/FilterSettingsExpressions.png)
+> ![Filter Settings Expressions tab](images/settings/FilterSettingsExpressions.png)
