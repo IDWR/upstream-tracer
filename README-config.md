@@ -18,5 +18,5 @@ Use graphics to represent attribute values
 Set filters on search-layers. Specify the label.   
 > ![Filter Settings Info tab](images/settings/FilterSettingsInfo.png)   
 
-For example, choose to see only values for the "Source" field that are "GROUNDWATER".   
+For example, choose to see only results where values of the "Source" field do not contain "GROUNDWATER".   
 > ![Filter Settings Expressions tab](images/settings/FilterSettingsExpressions.png)
