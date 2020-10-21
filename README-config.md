@@ -9,11 +9,11 @@ Specify the layer(s) to search for -- each search-layer must have a pop-up confi
 Buffer distance (width) and upstream distance are set here.  
 ![Search Source Settings](images/settings/SearchSettings.png)
 ## Directions Settings
-This sets the direction of the trace, upstream or downstream.  <style>h5 {color:#888888;}</style> 
-##### This setting is unused in this widget.   
+This sets the direction of the trace, upstream or downstream.  
+##### This setting is not currently used in this widget.   
 ## Symbology Settings
 Use graphics to represent attribute values
-##### This setting is unused in this widget.   
+##### This setting is not currently used in this widget.   
 ## Filter Settings
 Set filters on search-layers. Specify the label.   
 ![Filter Settings Info tab](images/settings/FilterSettingsInfo.png)   
