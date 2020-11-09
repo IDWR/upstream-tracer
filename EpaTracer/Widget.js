@@ -249,7 +249,7 @@ define([
 
     /**
     * Use proxies to replace the routeTaskUrl if configured
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _replaceRouteTaskUrlWithAppProxy: function (routeTaskUrl) {
       var ret = routeTaskUrl;
@@ -267,7 +267,7 @@ define([
 
     /**
     * Display error message in error node
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _displayWidgetError: function (msg) {
       if (this.widgetErrorNode) {
@@ -278,7 +278,7 @@ define([
 
     /**
     * Resize the widget components and connect map click on widget open
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     onOpen: function () {
       if (this._isValidConfig) {
@@ -297,7 +297,7 @@ define([
 
     /**
     * Resize the widget components on widget resize
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     resize: function () {
       this._onWindowResize();
@@ -305,7 +305,7 @@ define([
 
     /**
     * This function clears results when widget is destroyed
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     destroy: function () {
       //destroy widget data
@@ -315,7 +315,7 @@ define([
 
     /**
     * disconnect map click on widget close
-    * @memberOf widgets/EpaTracer/Widget.js
+    * -- memberOf widgets/EpaTracer/Widget.js
     */
     onClose: function () {
       if (this._isValidConfig) {
@@ -337,7 +337,7 @@ define([
 
     /**
     * disconnect map click on widget close
-    * @memberOf widgets/EpaTracer/Widget.js
+    * -- memberOf widgets/EpaTracer/Widget.js
     */
     onDeActive: function () {
       if (this._isValidConfig && this.config.showLocationTool) {
@@ -347,7 +347,7 @@ define([
 
     /**
     * This function destroys itemList widget and clears the search result
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _destroyWidgetData: function () {
       if (this._itemListObject) {
@@ -362,7 +362,7 @@ define([
 
     /**
     * This function validates the configured data
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _validateConfig: function () {
       if (!(this.config.searchLayers && this.config.searchLayers.length)) {
@@ -396,7 +396,7 @@ define([
 
     /**
     * This function updates the layer-details for the configured layers from selected webmap
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _updateConfig: function () {
       var i;
@@ -410,7 +410,7 @@ define([
     /**
     * Create and show alert message.
     * @param {string} msg
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _showMessage: function (msg) {
       var alertMessage = new Message({
@@ -421,7 +421,7 @@ define([
 
     /**
     * Initialize all widget components
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _initWidgetComponents: function () {
       //text to be displayed above search box
@@ -596,7 +596,7 @@ define([
     /**
      * Performs attribute search on the selected sources and return the deferred.
      * On complete it will return all the ids satisfying search criteria for all sources.
-     * @memberOf widgets/EpaTracer/Widget
+     * -- memberOf widgets/EpaTracer/Widget
      */
     _performAttributeSearch: function (sources) {
       var deferred, deferredList = [], featureLayerIdsList = [];
@@ -648,7 +648,7 @@ define([
 
     /**
      * Gets all the ids for the selected layer satisfying the whereClause
-     * @memberOf widgets/EpaTracer/Widget
+     * -- memberOf widgets/EpaTracer/Widget
      */
     _queryForIds: function (layer, where) {
       var queryTask, queryParameters, deferred;
@@ -675,7 +675,7 @@ define([
 
     /**
     * This function initialize the search widget
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _createSearchInstance: function () {
       var searchOptions;
@@ -835,7 +835,7 @@ define([
 
     /**
     * This function is used to get the last focus node of main screen
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _getMainScreenLastNode: function () {
       var lastFocusNode;
@@ -888,7 +888,7 @@ define([
 
     /**
     * This function initialize the Locate Button widget for using users current location
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _createCurrentLocationInstance: function () {
       //Check of app is running in https mode
@@ -924,7 +924,7 @@ define([
 
     /**
     * This function initialize the Locator widget for reverse geocoding
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _initReverseGeocoder: function () {
       var geocoderUrl;
@@ -962,7 +962,7 @@ define([
 
     /**
     * Callback handler called once location is reverse geocoded
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _onLocationToAddressComplete: function (result) {
       var screenPoint, infoTemplate, addressString, attributes, selectedLocationGraphic;
@@ -1011,7 +1011,7 @@ define([
 
     /**
     * This function handles different event required for widget
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _connectSelectLocationHandler: function () {
       //handle select location button click event
@@ -1037,7 +1037,7 @@ define([
 
     /**
     * This function initialize the search widget
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _initWorkflow: function (evt, attribteSearchResult) {
       var selectedFeature, horzontalSliderNode;
@@ -1104,17 +1104,19 @@ define([
       }
     },
 
-    // ************************************************************************
-    // ** Run workflow **  This is the heart of the widget.
-    // ************************************************************************
-    // Process the work-flow. Once the EPA tracer is called, the service 
-    // queue is checked, recursively, until a result or error is returned. 
-    // Once results are returned the following routines will be called, in order:
-	//   epaFetchResults
-	//   epaProcessResults
-	//   epaCreateBufferFromResponse
-	//   createFlowlineBuffer
-    // ************************************************************************
+    /************************************************************************
+    ** Run workflow **  This is the heart of the widget.
+    ************************************************************************
+    * Process the work-flow. Once the EPA tracer is called, the service 
+    * queue is checked, recursively, until a result or error is returned. 
+    * Once results are returned the following routines will be called, in order:
+	*   epaFetchResults
+	*   epaProcessResults
+	*   epaCreateFlowlineGraphics
+    *   createFlowlineBuffer
+    * @function runWorkflow
+    * @param {string} thiswkt Point-geometry for start of search, in well-known text.
+    ************************************************************************/
     runWorkflow: function(thiswkt) {
       // Run EPA's WATERS upstream/downstream trace tool.
       this.epaFindNearestStream(thiswkt)
@@ -1128,7 +1130,7 @@ define([
     
     /**
     * This function will clear results
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _clearResults: function (showInfoWindow) {
       if (this._highlightGraphicsLayer) {
@@ -1148,7 +1150,7 @@ define([
 
     /**
     * This function will connects the map event
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _connectMapEventHandler: function () {
       if (!this._mapClickHandler) {
@@ -1172,7 +1174,7 @@ define([
     /**
     * On map click init the workflow, and reverse geocode the address
     * to show in infowindow at the selected location.
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _onMapClick: function (evt) {
       if (this.config.showLocationTool) {
@@ -1192,7 +1194,7 @@ define([
     /**
     * On map mouse move update the toolTip position
     * to show in infowindow at the selected location.
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _onMapMouseMove: function (evt) {
       // update the tooltip as the mouse moves over the map
@@ -1216,7 +1218,7 @@ define([
 
     /**
     * This function will disconnects the map events
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _disconnectMapEventHandler: function () {
       this._enableWebMapPopup();
@@ -1235,7 +1237,7 @@ define([
 
     /**
     * This function will enable the web map popup.
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _enableWebMapPopup: function () {
       if (this.map) {
@@ -1245,7 +1247,7 @@ define([
 
     /**
     * This function will disable the web map popup.
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _disableWebMapPopup: function () {
       if (this.map) {
@@ -1255,7 +1257,7 @@ define([
 
     /**
     * This function create horizontal slider and set minimum maximum value of slider
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _createSlider: function () {
       // initialize and set the parameter of slider
@@ -1314,7 +1316,7 @@ define([
 
     /**
     * Call back for slider change event
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _bufferTextboxChange: function () {
       if (this._bufferTextbox.isValid()) {
@@ -1327,7 +1329,7 @@ define([
 
     /**
     * Call back for slider change event
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _sliderChange: function (value) {
       var sliderResult;
@@ -1348,7 +1350,11 @@ define([
       }
     },
 
-    // Create and initialize the upstream-search-distance controls.
+    /**
+    * Create and initialize the upstream-search-distance controls.
+    * @function _createUpstreamDistance
+    * -- memberOf widgets/EpaTracer/Widget
+    **/
     _createUpstreamDistance: function () {
       // initialize and set UI for upstream-search parameters 
       this._upstreamDistanceTextbox = new NumberTextBox({
@@ -1382,7 +1388,12 @@ define([
       })));
     },
     
-    // Validate upstream-search-distance.
+    /**
+    * Validate upstream-search-distance.
+    *
+    * @function _upstreamDistanceTextboxChange
+    * -- memberOf widgets/EpaTracer/Widget
+    **/
     _upstreamDistanceTextboxChange: function () {
       if (!this._upstreamDistanceTextbox.isValid()) {
         this._upstreamDistanceTextbox.set("value", 1);
@@ -1392,7 +1403,7 @@ define([
     
     /**
     * Returns the reverse geocoding address
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     showReverseGeocodedAddress: function () {
       if (this._geocoderSpatialRef && this._locatorInstance) {
@@ -1405,7 +1416,7 @@ define([
 
     /**
     * Returns the projected geometry in outSR
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     getProjectedGeometry: function (geometry, outSR) {
       var deferred, result, geometryService;
@@ -1423,9 +1434,17 @@ define([
       return deferred.promise;
     },
     
-    // Translate user-click (or measuring location) to stream 
-    // address using EPA's WATERS point-indexing tool.
-    // See https://www.epa.gov/waterdata/point-indexing-service
+    /**
+    * Translate user-click (or measuring location) to stream 
+    * address using EPA's WATERS point-indexing tool.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @see https://www.epa.gov/waterdata/point-indexing-service
+    * @async
+    * @function epaFindNearestStream
+    * @param {string} wkt Point-geometry for start of search, in well-known text.
+    * @return {Promise<var>} Point on the NHD flowline nearest the search-location.
+    **/
     epaFindNearestStream: function(wkt) {
       console.log("Inside epaFindNearestStream");
       this._loading.show();
@@ -1459,10 +1478,17 @@ define([
       });
     },
     
-    // Traverse, upstream, the NHDPlus stream network using 
-    // the EPA's WATERS upstream/downstream trace tool.
-    // Return the stream-network for the specified ComId.
-    // See https://www.epa.gov/waterdata/upstreamdownstream-search-service
+    /**
+    * Traverse, upstream, the NHDPlus stream network using 
+    * the EPA's WATERS upstream/downstream trace tool.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @see https://www.epa.gov/waterdata/upstreamdownstream-search-service
+    * @async
+    * @function epaTraceUpstream
+    * @param {object} response Response from request to EPA point-indexing service.
+    * @return {Promise<var>} Return the stream-network for the specified ComId.
+    **/
     epaTraceUpstream: function(response) {
       console.debug("Inside epaTraceUpstream where response.output is ", response.output);
 
@@ -1557,7 +1583,15 @@ define([
       });
     },
     
-    // Call the ResultsQueue.Service endpoint to get the results-queue response.
+    /**
+    * Call the ResultsQueue.Service endpoint to get the results-queue response.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @async
+    * @function epaCheckResultsQueueInitial
+    * @param {object} response Response from request to EPA up/downsteram tracing service.
+    * @return {Promise<var>} Return the response from the initial check of the EPA job-queue.
+    **/
     epaCheckResultsQueueInitial: function(response) {
 
       if (
@@ -1590,9 +1624,18 @@ define([
       });
     },
 
-    // Call the ResultsQueue.Service endpoint to request the status of upstream trace.
-    // This function will call itself until it gets a suitable answer: 
-    //epaCheckResultsQueueRecursive: function(error, response, sleeping) {
+    /**
+    * Call the EPA ResultsQueue.Service endpoint to request the status of upstream trace.
+    * This function will call itself until it receives a status of "complete", indicating
+    * that the job is done, or an error. If successful, this function calls epaFetchResults
+    * to process the results from the EPA upstream-trace job.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @async
+    * @function epaCheckResultsQueueRecursive
+    * @param {object} response Response from request to EPA up/downsteram tracing service.
+    * @return {Promise<var>} Return an error response if job failed.
+    **/
     epaCheckResultsQueueRecursive: function(response, sleeping) {
         console.log("Inside epaCheckResultsQueueRecursive...where status is '" + response.output.queue_status + "'.");
 
@@ -1658,7 +1701,15 @@ define([
       }
     },
     
-    // Retrieve the data from the EPA's server.
+    /**
+    * Retrieve the data from the EPA's server.  Upon successfully retrieving the results, it
+    * calls epaProcessResults to act on them.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @async
+    * @function epaFetchResults
+    * @param {object} response Response from the EPA up/downsteram tracing service.
+    **/
     epaFetchResults: function(response){
       console.log("===== Processing is complete! =====");
 
@@ -1696,6 +1747,15 @@ define([
         }));  
     },
 
+    /**
+    * Check for null response from EPA upstream trace service.  If non-null, call 
+    * epaCreateFlowlineGraphics to process the "found" flow-lines.
+    * The geometry is passed as an array of EPA "flowlines_traversed" JSON.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function epaProcessResults
+    * @param {object} response Response from the EPA up/downsteram tracing service.
+    **/
     epaProcessResults: function(response) {
       console.debug("insite epaProcessResults where response is ", response);
 
@@ -1707,19 +1767,27 @@ define([
           this._highlightGraphicsLayer.clear(); // Get rid of "Fire-fly" symbol at map-click point.
         }
         if (response.status.status_message !== null) {
-          console.debug("insite epaProcessResults where output is null and response.status.status_message is", response.status.status_message);
+          console.debug("inside epaProcessResults where output is null and response.status.status_message is", response.status.status_message);
         } else {
           this._showMessage(this.nls.noFeatureFoundText);
         }
 
       } else {
-        this.epaCreateBufferFromResponse(response.output.flowlines_traversed);
+        this.epaCreateFlowlineGraphics(response.output.flowlines_traversed);
       }
       this._loading.hide();
     },
 
-    // Convert response from EPA's tracer to a buffer used to select diversions.
-    epaCreateBufferFromResponse: function(flowlines) {
+    /**
+    * Convert NHD flowlines returned from EPA's tracer to flowline graphics and then
+    * call createFlowlineBuffer to create a buffer used to select diversions.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @async
+    * @function epaCreateFlowlineGraphics
+    * @param {object} flowlines Response from the EPA up/downsteram tracing service.
+    **/
+    epaCreateFlowlineGraphics: function(flowlines) {
         var paths = [[]];
         // Make sure that the response-geometry is a line.
         if (flowlines[0].shape.type == "LineString")
@@ -1760,6 +1828,15 @@ define([
         this.createFlowlineBuffer(geometry);
     },
 
+    /**
+    * Create a buffer surrounding the NHD flowlines returned from EPA's tracer and
+    * draw that buffer's boundary on the map.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @async
+    * @function createFlowlineBuffer
+    * @param {object} geometry Geometry of "found" NHD flowlines.
+    **/
     createFlowlineBuffer: function (geometry) {
       var params, geometryService;
       geometryService = new GeometryService(this.config.helperServices.geometry.url);
@@ -1818,7 +1895,14 @@ define([
       domClass.add(this.downloadItemsNode, "esriCTHidden");
     },
     
-    // Create the CSV-format files and offer them to the client.
+    /**
+    * Create the CSV-format files and offer them to the client.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function createCsv
+    * @param {object} featureObjs 
+    * @param {object} diversionLayerDetails 
+    **/
     createCsv: function(featureObjs, diversionLayerDetails) {
       var outSR = new SpatialReference(4326);
       var outputFileName = "";
@@ -1849,24 +1933,23 @@ define([
       });
     },
 
-    // ========================================================================
-    // Adopted from ..\stemapp\widgets\Screening\download\download.js    
-    // ========================================================================
+    /**
+    * Export the CSV-format files to the client.
+    *
+    * @see Esri's WAB Screening download widget.
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _exportToCSV
+    * @param {object} features Features to export. 
+    * @param {object} layer ArcGIS Server map service layer object. 
+    **/
     _exportToCSV: function (features, layer) {
-      //var layer, data, options = {},
-      //  popupInfo, canDownload, downloadLayersArr = [];
       var data, options = {}, popupInfo;
 
       options = {};
 
       data = this._getLayerData(layer, features);
       data = dojo.mixin({}, data); // jshint ignore:line
-      // function to remove analysis area / length (CSVMeasurementUnit)from data
-      //data = this._removeAnalysisUnitFromCSV(data);
-      // function to add analysis (CSVMeasurementUnit)area / length to data
-      //this._addAnalysisDataToCSVData(data, currentLayer.id);
       popupInfo = this._getInfoTemplate(layer);
-      //if (data.graphicsArray.length > 0 && canDownload) {
       if (data.graphicsArray.length > 0) {
         options.datas = data.graphicsArray;
         options.fromClient = false;
@@ -1878,7 +1961,7 @@ define([
         options.popupInfo = popupInfo;
         
         console.debug(options);
-          //layer.name || "CSV_FILE",
+
         CSVUtils.exportCSVFromFeatureLayer(
           layer.title || "CSV_FILE",
           layer, options);
@@ -1886,9 +1969,17 @@ define([
     },
 
     /**
-     * Fetch the layer data
-     * Added transformation to lat/long.
      */
+    /**
+    * Fetch the features to prepare for download to the client.
+    * Data are transformed from Web Mercator to lat/long.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _getLayerData
+    * @param {object} layer ArcGIS Server map service layer object. 
+    * @param {object} features Features to export. 
+    * @return {object} Featureset to be exported to client.
+    **/     
     _getLayerData: function (layer, features) {
       var point = null, layerGraphics = [],
         pointLayerData;
@@ -1920,9 +2011,15 @@ define([
     },
 
     /**
-     * Format the point layer data to include x and y parameters
-     * Change the geometry from Web Mercator to Lat/Long.
-     */
+    * Format the point layer data to include x and y parameters.
+    * Data are transformed from Web Mercator to lat/long.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _formatPointLayerData
+    * @param {object} layerGraphics Graphics (features) to export. 
+    * @param {object} layer ArcGIS Server map service layer object. 
+    * @return {object} Featureset to be exported to client.
+    **/  
     _formatPointLayerData: function (layerGraphics, layer) {
       var data_set, _outFields, pointLayerData = {};
       data_set = lang.clone(layerGraphics);
@@ -1983,8 +2080,15 @@ define([
       pointLayerData._outFields = _outFields;
       return pointLayerData;
     },
-// End of routines from ..\stemapp\widgets\Screening\download\download.js
 
+    /**
+    * Get the infoTemplate for an ArcGIS Server map service.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _getInfoTemplate
+    * @param {object} layer ArcGIS Server map service layer object. 
+    * @return {object} infoTemplate for layer.
+    **/  
     _getInfoTemplate: function (layer) {
       var layerId, parentLayerId, layerInstance;
       if (layer.infoTemplate) {
@@ -2008,9 +2112,13 @@ define([
     }, 
 
     /**
-     * Based of searched location zooms to the location based on geometry type
-     * @memberOf widgets/EpaTracer/Widget
-     */
+    * Zoom to the extent of all found features.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _getInfoTemplate
+    * @param {object} layer ArcGIS Server map service layer object. 
+    * @return {object} infoTemplate for layer.
+    **/
     zoomToFeature: function () {
       var extent, zoomScale, featureGeometry;
       featureGeometry = this._prevFeature.feature.geometry;
@@ -2041,15 +2149,22 @@ define([
     },
 
     /**
-     * Returns extent for a point based in tolerance in pixel & maps extent
-     * @memberOf widgets/EpaTracer/Widget
-     */
+    * Create map-extent for a single point.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function pointToExtent
+    * @param {object} map Current map object. 
+    * @param {object} point  
+    * @param {object} toleranceInPixel Number of map-pixels to expand extent. 
+    * @return {object} New extent.
+    **/
     pointToExtent: function (map, point, toleranceInPixel) {
       //calculate map coords represented per pixel
       var pixelWidth = map.extent.getWidth() / map.width;
       //calculate map coords for tolerance in pixel
       var toleranceInMapCoords = toleranceInPixel * pixelWidth;
       //calculate & return computed extent
+      console.log("============ Inside pointToExtent...computing new extent.")
       return new Extent(point.x - toleranceInMapCoords,
         point.y - toleranceInMapCoords,
         point.x + toleranceInMapCoords,
@@ -2057,7 +2172,13 @@ define([
         map.spatialReference);
     },
     
-    // show buffer on map if buffer visibility is set to true in config
+    /**
+    * Show buffer on map if buffer visibility is set to true in config.
+    *
+    * -- memberOf widgets/EpaTracer/Widget
+    * @function _showBuffer
+    * @param {object} bufferedGeometries Geometries to be added to map. 
+    **/
     _showBuffer: function (bufferedGeometries) {
       if (this.config.bufferInfo && this.config.bufferInfo.isVisible) {
         this._bufferGraphicLayer.clear();
@@ -2073,7 +2194,7 @@ define([
     
     /**
     * Set the selected feature from results
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _getSelectedFeatureFromResult: function (evt) {
       var selectedFeature;
@@ -2089,7 +2210,7 @@ define([
 
     /**
     * Function to highlight features on map
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _highlightSelectedLocation: function (selectedFeature) {
       var symbol;
@@ -2109,7 +2230,7 @@ define([
 
     /**
     * Window resize handler
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _onWindowResize: function () {
       if (this._windowResizeTimer) {
@@ -2121,7 +2242,7 @@ define([
 
     /**
     * Resets the components of the widgets according to updated size
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _resetComponents: function () {
       var containerGeom, calculatedWidth, searchGroup, componentsWithScrollingTouch = [];
@@ -2186,7 +2307,7 @@ define([
 
     /**
     * Initialize item-list widget to display summary of results
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     **/
     _initLayerList: function () {
       this._itemListObject = new ItemList({
@@ -2261,7 +2382,7 @@ define([
 
     /**
     * This function used for loading indicator
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _initLoading: function () {
       this._loading = new LoadingIndicator({
@@ -2273,7 +2394,7 @@ define([
    
     /**
     * Display buffer input option
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _displayBufferInputOptions: function () {
       // set buffer input option radio button
@@ -2294,7 +2415,7 @@ define([
     * This function checks if all configured layers are
     * not polygon and intersectSearchedLocation flag
     * is disabled then it shows horizontal slider widget
-    * @memberOf widgets/EpaTracer/Widget
+    * -- memberOf widgets/EpaTracer/Widget
     */
     _setBufferSliderVisiblity: function () {
       var hideHorizontalSliderFlag = true, itemListMainContainer;
@@ -2403,7 +2524,7 @@ define([
     * This function is used to detect style change of WAB in editor mode.
     * Once it is detected, theme is reset.
     * For e.g. changing dashboard theme style from light to dark
-    * @memberOf EpaTracer/Widget
+    * -- memberOf EpaTracer/Widget
     */
     onAppConfigChanged: function (appConfig, reason, changedData) {
       var selectedThemeName;
