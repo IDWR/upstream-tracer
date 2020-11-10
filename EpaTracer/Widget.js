@@ -1,3 +1,9 @@
+/**
+ * @fileOverview EpaTracer (upstream-tracer) widget.
+ * Trace NHDPlus flow-lines, upstream from a location, buffer and select features.
+ * @author <a href="mailto:ben.britton@idwr.idaho.gov">Ben Britton</a>
+ * @version 1.0.0
+ */
 ///////////////////////////////////////////////////////////////////////////
 // Copyright © Esri. All Rights Reserved.
 //
@@ -1104,19 +1110,19 @@ define([
       }
     },
 
-    /************************************************************************
-    ** Run workflow **  This is the heart of the widget.
-    ************************************************************************
+    /**
+    * Run workflow!  This is the part of the widget that works with EPA services.
+    *
     * Process the work-flow. Once the EPA tracer is called, the service 
     * queue is checked, recursively, until a result or error is returned. 
     * Once results are returned the following routines will be called, in order:
-	*   epaFetchResults
-	*   epaProcessResults
-	*   epaCreateFlowlineGraphics
+    *   epaFetchResults,
+    *   epaProcessResults,
+    *   epaCreateFlowlineGraphics,
     *   createFlowlineBuffer
     * @function runWorkflow
     * @param {string} thiswkt Point-geometry for start of search, in well-known text.
-    ************************************************************************/
+    **/
     runWorkflow: function(thiswkt) {
       // Run EPA's WATERS upstream/downstream trace tool.
       this.epaFindNearestStream(thiswkt)
