@@ -1,23 +1,6 @@
 <div>
     <div data-dojo-attach-point="widgetMainNode" class="esriCTWidgetMainNode esriCTHidden">
         <div class="esriCTSearchOuterContainer" data-dojo-attach-point="searchOuterContainer">
-            <div class="esriCTSearchHeader" data-dojo-attach-point="searchHeaderTextNode">
-                ${nls.searchHeaderText}</div>
-            <div class="esriCTSearchContainer">
-                <div class="esriCTSearchDiv">
-                    <div data-dojo-attach-point="search">
-                    </div>
-                </div>
-                <div class="esriCTCurrentLocationDiv esriCTImgButtons esriCTCurrentLocation esriCTHidden"
-                    data-dojo-attach-point="currentLocationNode">
-                </div>
-                <div role="button" tabindex="0"
-                    class="esriCTSelectLocationDiv esriCTImgButtons esriCTSelectLocation esriCTHidden"
-                    data-dojo-attach-point="selectLocation" aria-label="${nls.selectLocationToolTip}"
-                    title="${nls.selectLocationToolTip}">
-                </div>
-            </div>
-            <div style="clear: both"></div>
             <div class="esriCTBufferOptionParentDiv esriCTHidden" data-dojo-attach-point="bufferOptionParentNode">
                 <div data-dojo-attach-point="bufferTextboxParentNode" class="esriCTBufferTextboxParent">
                     <div class="esriCTBufferTextboxText" data-dojo-attach-point="bufferTextboxText">
@@ -44,6 +27,24 @@
                 <div tabindex="0" aria-label="${nls.upstreamDistanceTextboxLabel}" data-dojo-attach-point="upstreamDistanceTextboxNode">
                 </div>
             </div>
+            <div class="esriCTSearchHeader" data-dojo-attach-point="searchHeaderTextNode">
+                ${nls.searchHeaderText}</div>
+            <div class="esriCTSearchContainer">
+                <div class="esriCTSearchDiv">
+                    <div data-dojo-attach-point="search">
+                    </div>
+                </div>
+                <div class="esriCTCurrentLocationDiv esriCTImgButtons esriCTCurrentLocation esriCTHidden"
+                    data-dojo-attach-point="currentLocationNode">
+                </div>
+                <div role="button" tabindex="0"
+                    class="esriCTSelectLocationDiv esriCTImgButtons esriCTSelectLocation esriCTHidden"
+                    data-dojo-attach-point="selectLocation" aria-label="${nls.selectLocationToolTip}"
+                    title="${nls.selectLocationToolTip}">
+                </div>
+            </div>
+            <div style="clear: both"></div>
+            <br/>
             <div data-dojo-attach-point="applyFilterNode" class="esriCTApplyFilterDiv">
                 <div data-dojo-attach-point="applyFilterArrowNodeParent" class="esriCTapplyFilterArrowNodeParent"  tabindex="0" role="button" aria-label="${nls.filterTitle}">
                     <div class="esriCTFilterToApply" >
